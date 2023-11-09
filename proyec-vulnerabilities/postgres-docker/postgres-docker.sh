@@ -1,1 +1,1 @@
-docker run --rm --name postges-vulnerabilities -p 8083:80 -d luisfercho09/postges-vulnerabilities
+docker run --rm --name postgres-vulnerabilities -p 8083:80 -d luisfercho09/postgres-vulnerabilities

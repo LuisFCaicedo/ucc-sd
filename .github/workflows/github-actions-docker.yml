@@ -31,24 +31,73 @@ jobs:
         id: meta
         uses: docker/metadata-action@9ec57ed1fcdbf14dcef7dfbe97b2010124a938b7
         with:
-          images: luisfercho09/firewall-vulnerabilities
-          images: luisfercho09/nginx-vulnerabilities
-          images: luisfercho09/openvas-vulnerabilities
-          images: luisfercho09/postges-vulnerabilities
-          images: luisfercho09/redis-vulnerabilities
-          images: luisfercho09/sonarqube-vulnerabilities
-          images: luisfercho09/tenable-vulnerabilities
+          images: |
+          luisfercho09/firewall-vulnerabilities
+          luisfercho09/nginx-vulnerabilities
+          luisfercho09/openvas-vulnerabilities
+          luisfercho09/postges-vulnerabilities
+          luisfercho09/redis-vulnerabilities
+          luisfercho09/sonarqube-vulnerabilities
+          luisfercho09/tenable-vulnerabilities
       
-      - name: Build and push Docker image
+      - name: Build and push Docker image - firewall
         uses: docker/build-push-action@3b5e8027fcad23fda98b2e3ac259d8d67585f671
         with:
           context: .
           file: ./proyec-vulnerabilities/firewall-docker/Dockerfile
+          push: true
+          tags: ${{ steps.meta.outputs.tags }}
+          labels: ${{ steps.meta.outputs.labels }}
+
+      - name: Build and push Docker image - nginx
+        uses: docker/build-push-action@3b5e8027fcad23fda98b2e3ac259d8d67585f671
+        with:
+          context: .
           file: ./proyec-vulnerabilities/nginx-docker/Dockerfile
+           push: true
+          tags: ${{ steps.meta.outputs.tags }}
+          labels: ${{ steps.meta.outputs.labels }}
+
+      - name: Build and push Docker image - openvas
+        uses: docker/build-push-action@3b5e8027fcad23fda98b2e3ac259d8d67585f671
+        with:
+          context: .
           file: ./proyec-vulnerabilities/openvas-docker/Dockerfile
-          file: ./proyec-vulnerabilities/apostges-docker/Dockerfile
+          push: true
+          tags: ${{ steps.meta.outputs.tags }}
+          labels: ${{ steps.meta.outputs.labels }}
+
+      - name: Build and push Docker image - postgres
+        uses: docker/build-push-action@3b5e8027fcad23fda98b2e3ac259d8d67585f671
+        with:
+          context: .
+          file: ./proyec-vulnerabilities/postgres-docker/Dockerfile
+          push: true
+          tags: ${{ steps.meta.outputs.tags }}
+          labels: ${{ steps.meta.outputs.labels }}
+
+      - name: Build and push Docker image - redis
+        uses: docker/build-push-action@3b5e8027fcad23fda98b2e3ac259d8d67585f671
+        with:
+          context: .
           file: ./proyec-vulnerabilities/redis-docker/Dockerfile
-          file: ./proyec-vulnerabilities/asonarqube-docker/Dockerfile
+          push: true
+          tags: ${{ steps.meta.outputs.tags }}
+          labels: ${{ steps.meta.outputs.labels }}
+
+      - name: Build and push Docker image - sonarqube
+        uses: docker/build-push-action@3b5e8027fcad23fda98b2e3ac259d8d67585f671
+        with:
+          context: .
+          file: ./proyec-vulnerabilities/sonarqube-docker/Dockerfile
+          push: true
+          tags: ${{ steps.meta.outputs.tags }}
+          labels: ${{ steps.meta.outputs.labels }}
+
+      - name: Build and push Docker image - tenable
+        uses: docker/build-push-action@3b5e8027fcad23fda98b2e3ac259d8d67585f671
+        with:
+          context: .
           file: ./proyec-vulnerabilities/tenable-docker/Dockerfile
           push: true
           tags: ${{ steps.meta.outputs.tags }}
