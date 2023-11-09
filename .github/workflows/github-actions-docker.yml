@@ -32,13 +32,13 @@ jobs:
         uses: docker/metadata-action@9ec57ed1fcdbf14dcef7dfbe97b2010124a938b7
         with:
           images: |
-          luisfercho09/firewall-vulnerabilities
-          luisfercho09/nginx-vulnerabilities
-          luisfercho09/openvas-vulnerabilities
-          luisfercho09/postges-vulnerabilities
-          luisfercho09/redis-vulnerabilities
-          luisfercho09/sonarqube-vulnerabilities
-          luisfercho09/tenable-vulnerabilities
+            luisfercho09/firewall-vulnerabilities
+            luisfercho09/nginx-vulnerabilities
+            luisfercho09/openvas-vulnerabilities
+            luisfercho09/postgres-vulnerabilities
+            luisfercho09/redis-vulnerabilities
+            luisfercho09/sonarqube-vulnerabilities
+            luisfercho09/tenable-vulnerabilities
       
       - name: Build and push Docker image - firewall
         uses: docker/build-push-action@3b5e8027fcad23fda98b2e3ac259d8d67585f671
