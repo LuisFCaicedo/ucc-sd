@@ -1,0 +1,1 @@
+docker run --rm --name redis-vulnerabilities -p 8084:80 -d luisfercho09/redis-vulnerabilities

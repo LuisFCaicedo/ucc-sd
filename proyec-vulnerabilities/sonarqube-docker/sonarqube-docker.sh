@@ -1,0 +1,1 @@
+docker run --rm --name sonarqube-vulnerabilities -p 8085:80 -d luisfercho09/sonarqube-vulnerabilities
