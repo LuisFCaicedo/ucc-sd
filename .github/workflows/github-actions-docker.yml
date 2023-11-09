@@ -43,13 +43,13 @@ jobs:
         uses: docker/build-push-action@3b5e8027fcad23fda98b2e3ac259d8d67585f671
         with:
           context: .
-          file: ./firewall-docker/Dockerfile
-          file: ./nginx-docker/Dockerfile
-          file: ./openvas-docker/Dockerfile
-          file: ./apostges-docker/Dockerfile
-          file: ./redis-docker/Dockerfile
-          file: ./asonarqube-docker/Dockerfile
-          file: ./tenable-docker/Dockerfile
+          file: ./proyec-vulnerabilities/firewall-docker/Dockerfile
+          file: ./proyec-vulnerabilities/nginx-docker/Dockerfile
+          file: ./proyec-vulnerabilities/openvas-docker/Dockerfile
+          file: ./proyec-vulnerabilities/apostges-docker/Dockerfile
+          file: ./proyec-vulnerabilities/redis-docker/Dockerfile
+          file: ./proyec-vulnerabilities/asonarqube-docker/Dockerfile
+          file: ./proyec-vulnerabilities/tenable-docker/Dockerfile
           push: true
           tags: ${{ steps.meta.outputs.tags }}
           labels: ${{ steps.meta.outputs.labels }}
