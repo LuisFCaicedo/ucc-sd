@@ -54,7 +54,7 @@ jobs:
         with:
           context: .
           file: ./proyec-vulnerabilities/nginx-docker/Dockerfile
-           push: true
+          push: true
           tags: ${{ steps.meta.outputs.tags }}
           labels: ${{ steps.meta.outputs.labels }}
 
