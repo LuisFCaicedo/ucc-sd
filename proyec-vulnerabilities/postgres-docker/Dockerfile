@@ -1,2 +1,2 @@
 FROM postgres:14
-COPY ./proyec-vulnerabilities/postgres-docker/public-html
+RUN ./proyec-vulnerabilities/postgres-docker/public-html

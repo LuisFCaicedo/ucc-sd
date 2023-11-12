@@ -1,2 +1,2 @@
 FROM sonarqube:8.9-community
-COPY ./proyec-vulnerabilities/sonarqube-docker/public-html
+RUN ./proyec-vulnerabilities/sonarqube-docker/public-html

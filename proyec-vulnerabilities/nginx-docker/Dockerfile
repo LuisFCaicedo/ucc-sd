@@ -1,2 +1,2 @@
 FROM nginx
-COPY ./proyec-vulnerabilities/nginx-docker/public-html
+RUN ./proyec-vulnerabilities/nginx-docker/public-html
