@@ -1,1 +1,1 @@
-docker run --rm --name tenable-vulnerabilities -p 8086:80 -d luisfercho09/tenable-vulnerabilities
+docker run --rm --name tenable-vulnerabilities -p 9010:9010 -d luisfercho09/tenable-vulnerabilities
