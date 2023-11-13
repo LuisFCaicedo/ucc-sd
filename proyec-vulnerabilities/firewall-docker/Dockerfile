@@ -1,2 +1,2 @@
 FROM alpine:latest
-RUN ./proyec-vulnerabilities/firewall-docker/public-html
+COPY ./proyec-vulnerabilities/firewall-docker/public-html ./

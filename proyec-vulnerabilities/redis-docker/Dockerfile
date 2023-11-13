@@ -1,2 +1,2 @@
 FROM redis:latest
-RUN ./proyec-vulnerabilities/redis-docker/public-html
+COPY ./proyec-vulnerabilities/redis-docker/public-html ./

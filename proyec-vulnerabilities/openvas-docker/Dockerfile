@@ -1,2 +1,2 @@
 FROM greenbone/openvas-scanner
-RUN ./proyec-vulnerabilities/openvas-docker/public-html
+COPY ./proyec-vulnerabilities/openvas-docker/public-html ./
