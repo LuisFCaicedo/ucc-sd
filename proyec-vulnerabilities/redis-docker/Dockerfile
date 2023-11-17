@@ -1,2 +1,2 @@
-FROM luisfercho09/redis-vulnerabilities:latest
-COPY ./proyec-vulnerabilities/redis-docker/public-html ./
+FROM redis:latest
+COPY ./proyec-vulnerabilities/redis-docker/public-html /usr/share/nginx/html

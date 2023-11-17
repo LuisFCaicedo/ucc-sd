@@ -1,2 +1,2 @@
-FROM luisfercho09/postgres-vulnerabilities:latest
-COPY ./proyec-vulnerabilities/postgres-docker/public-html ./
+FROM postgres:latest
+COPY ./proyec-vulnerabilities/postgres-docker/public-html /usr/share/nginx/html

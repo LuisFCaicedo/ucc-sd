@@ -16,7 +16,7 @@ resource "docker_image" "image_firewall" {
 resource "docker_container" "container_firewall" {
   name  = "firewall_container"
   image = docker_image.image_firewall.image_id
-  command = ["bash", "-it"]
+  command = ["/docker-entrypoint.sh"]
 
   restart = "on-failure"
 
@@ -57,6 +57,7 @@ resource "docker_image" "image_nginx" {
 resource "docker_container" "container_nginx" {
   name  = "nginx_container"
   image = docker_image.image_nginx.image_id
+  command = ["/docker-entrypoint.sh"]
 
   ports {
     internal = 80
@@ -70,6 +71,7 @@ resource "docker_image" "sonarqube" {
 resource "docker_container" "sonarqube" {
   image = docker_image.sonarqube.name
   name  = "sonarqube"
+  command = ["/docker-entrypoint.sh"]
 
   ports {
     internal = 80
@@ -87,6 +89,7 @@ resource "docker_image" "terrascan" {
 resource "docker_container" "terrascan" {
   image = docker_image.terrascan.name
   name  = "Container_tenable"
+  command = ["/docker-entrypoint.sh"]
 
   ports {
     internal = 80
@@ -107,6 +110,7 @@ resource "docker_image" "openvas-scanner" {
 resource "docker_container" "openvas-scanner" {
   image = docker_image.openvas-scanner.name
   name  = "openvas-scanner_container"
+  command = ["/docker-entrypoint.sh"]
 
   ports {
     internal = 80
@@ -122,6 +126,7 @@ resource "docker_image" "redis" {
 resource "docker_container" "redis" {
   image = docker_image.redis.name
   name  = "redis_container"
+  command = ["/docker-entrypoint.sh"]
 
   ports {
     internal = 80
@@ -138,6 +143,7 @@ resource "docker_image" "image_postgres" {
 resource "docker_container" "container_postgres" {
   name  = "postgres_container"
   image = docker_image.image_postgres.image_id
+  command = ["/docker-entrypoint.sh"]
 
   env = [
     "POSTGRES_PASSWORD=Luisfercho2514*"

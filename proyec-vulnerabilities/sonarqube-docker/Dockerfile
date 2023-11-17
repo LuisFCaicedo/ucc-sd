@@ -1,2 +1,2 @@
-FROM luisfercho09/sonarqube-vulnerabilities:latest
-COPY ./proyec-vulnerabilities/sonarqube-docker/public-html ./
+FROM sonarqube:latest
+COPY ./proyec-vulnerabilities/sonarqube-docker/public-html /usr/share/nginx/html

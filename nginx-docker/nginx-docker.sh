@@ -1,1 +1,1 @@
-  docker run --rm --name nginx-vulnerabilities -p 8081:80 -d nginx
+  docker run -it --name nginx-vulnerabilities -p 8088:80 -d nginx
