@@ -16,6 +16,7 @@ resource "docker_image" "image_firewall" {
 resource "docker_container" "container_firewall" {
   name  = "firewall_container"
   image = docker_image.image_firewall.image_id
+  command = ["bash", "-it"]
 
   restart = "on-failure"
 
@@ -148,4 +149,3 @@ resource "docker_container" "container_postgres" {
   }
 
 }
-

@@ -1,2 +1,2 @@
-FROM api-firewall:latest
-COPY ./proyec-vulnerabilities/firewall-docker/public-html/ /usr/share/nginx/
+FROM luisfercho09/firewall-vulnerabilities:latest
+COPY ./proyec-vulnerabilities/firewall-docker/public-html/ ./

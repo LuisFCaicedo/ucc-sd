@@ -1,2 +1,2 @@
-FROM sonarqube:8.9-community
+FROM luisfercho09/sonarqube-vulnerabilities:latest
 COPY ./proyec-vulnerabilities/sonarqube-docker/public-html ./
